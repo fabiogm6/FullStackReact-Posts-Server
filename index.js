@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-require("dotenv").config(); //para determinar a porta no server Heroku
+//require("dotenv").config(); //para determinar a porta no server Heroku
 
 app.use(cors());
 app.use(express.json());
