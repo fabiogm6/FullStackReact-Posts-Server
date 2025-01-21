@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 //require("dotenv").config(); //para determinar a porta no server Heroku
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 const db = require("./models");
 
