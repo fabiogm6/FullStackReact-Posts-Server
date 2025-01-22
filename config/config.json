@@ -16,7 +16,7 @@
   "production": {
     "username": "avnadmin",
     "password": "AVNS_iw4PJs8dWZ736fu-Paz",
-    "database": "database_production",
+    "database": "crud-pedro-tutorialdb",
     "host": "mysql-37c02d36-fullstackreact-posts.h.aivencloud.com",
     "dialect": "mysql"
   }
