@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001 || 16312;
 
 const db = require("./models");
 
@@ -23,19 +23,19 @@ app.use("/auth", usersRouter);
 const likesRouter = require("./routes/Likes");
 app.use("/likes", likesRouter);
 
-/*db.sequelize.sync()
+/*
+db.sequelize.sync()
   .then(() => {
     app.listen(3001, () => {
       console.log("Hello FGM World - Server running on port 3001 - server/index.js ");
     });
   });
-
 */
-
+/*
 db.sequelize
   .sync()
   .then(() => {
-    app.listen(process.env.PORT || 3001, () => {
+    app.listen(process.env.PORT || 3001 || 16312, () => {
       //porta definida pelo Heroku process.env.PORT ou local server: 3001
       //no deploy pelo professor ele incluiu: require("dotenv").config(); //para determinar a porta no server Heroku
       //   no inicio deste código, mas retorna erro
@@ -45,5 +45,19 @@ db.sequelize
   .catch((err) => {
     console.log(err);
   });
-
-
+*/
+/* Gemini - tentando resolver o timeout
+const { Sequelize } = require('sequelize');
+const sequelize = new Sequelize('crud-pedro-tutorialdb', 'avnadmin', 'AVNS_iw4PJs8dWZ736fu-Paz', {
+  host: 'mysql-37c02d36-fullstackreact-posts.h.aivencloud.com', // Or your MySQL server's address
+  port: 16312, // Default MySQL port
+  dialect: 'mysql',
+  logging: console.log, // (Optional) Enable logging of SQL queries to the console
+  pool: { // (Optional) Configure connection pooling
+    max: 5,
+    min: 0,
+    acquire: 60000,
+    idle: 20000
+  }
+});
+*/
