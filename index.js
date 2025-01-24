@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 3001 || 16312;
+const port = process.env.PORT || 3001 || 16312 || 10000;
 
 const db = require("./models");
 
@@ -35,7 +35,7 @@ db.sequelize.sync()
 db.sequelize
   .sync()
   .then(() => {
-    app.listen(process.env.PORT || 3001 || 16312, () => {
+    app.listen(process.env.PORT || 3001 || 16312 || 10000, () => {
       //porta definida pelo Heroku process.env.PORT ou local server: 3001
       //no deploy pelo professor ele incluiu: require("dotenv").config(); //para determinar a porta no server Heroku
       //   no inicio deste código, mas retorna erro
