@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "root",
+        "password": "password",
+        "database": "crud-pedro-tutorialdb",
+        "host": "localhost",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "root",
+        "password": null,
+        "database": "database_test",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "avnadmin",
+        "password": "AVNS_iw4PJs8dWZ736fu-Paz",
+        "database": "crud-pedro-tutorialdb",
+        "host": "mysql-37c02d36-fullstackreact-posts.h.aivencloud.com",
+        "dialect": "mysql"
+    }
+}

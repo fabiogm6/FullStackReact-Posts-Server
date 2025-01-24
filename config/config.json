@@ -17,6 +17,7 @@
     "username": "avnadmin",
     "password": "AVNS_iw4PJs8dWZ736fu-Paz",
     "database": "crud-pedro-tutorialdb",
+    "port": "16312",
     "host": "mysql-37c02d36-fullstackreact-posts.h.aivencloud.com",
     "dialect": "mysql"
   }
