@@ -31,7 +31,7 @@ db.sequelize.sync()
     });
   });
 */
-/*
+
 db.sequelize
   .sync()
   .then(() => {
@@ -45,7 +45,7 @@ db.sequelize
   .catch((err) => {
     console.log(err);
   });
-*/
+
 /* Gemini - tentando resolver o timeout
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('crud-pedro-tutorialdb', 'avnadmin', 'AVNS_iw4PJs8dWZ736fu-Paz', {
