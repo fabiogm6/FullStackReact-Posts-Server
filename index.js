@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 3001 || 16312 || 10000;
+const port = process.env.PORT || 3001 || 16312 || 10000 || 8888;
 
 const db = require("./models");
 
@@ -32,14 +32,21 @@ db.sequelize.sync()
   });
 */
 
+/* Backend servers Ports:
+3001 for Local
+10000 for Render
+8888 for Netlify
+16312 for Vercel
+*/
+
 db.sequelize
   .sync()
   .then(() => {
-    app.listen(process.env.PORT || 3001 || 16312 || 10000, () => {
+    app.listen(process.env.PORT || 3001 || 16312 || 10000 || 8888, () => {
       //porta definida pelo Heroku process.env.PORT ou local server: 3001
       //no deploy pelo professor ele incluiu: require("dotenv").config(); //para determinar a porta no server Heroku
       //   no inicio deste código, mas retorna erro
-      console.log("Hello FGM World - Server running on port 3001 - server/index.js ");
+      console.log("Hello FGM World - Server running on port - server/index.js ");
     });
   })
   .catch((err) => {
