@@ -5,8 +5,8 @@ const cors = require("cors");
 
 app.use(cors());
 app.use(express.json());
-// qualquer coisa
-// qualquer coisa
+// qualquer coisa soh para acionar o build no netlify
+
 const port = process.env.PORT || 3001 || 16312 || 10000 || 8888;
 
 const db = require("./models");
